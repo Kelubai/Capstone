@@ -1,21 +1,93 @@
+blue #0a3ece
+brown #aa4d0a
+gold #ccc135
+
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bitter Regular'), local('Bitter-Regular'), url(https://fonts.gstatic.com/s/bitter/v12/zfs6I-5mjWQ3nxqccMoL2A.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+    font-family: 'Bitter bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Bitter Bold'), local('Bitter-Bold'), url(https://fonts.gstatic.com/s/bitter/v12/evC1haE-MsorTl_A7_uSGVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+      font-family: 'Josefin Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Josefin Sans Regular'), local('JosefinSans-Regular'), url(https://fonts.gstatic.com/s/josefinsans/v12/xgzbb53t8j-Mo-vYa23n5ugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+        font-family: 'Josefin Sans bold';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v12/C6HYlRF50SGJq1XyXj04z3NuWYKPzoeKl5tYj8yhly0.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v5/HLBysyo0MQBO_7E-DWLwzg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Poppins bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Poppins Bold'), local('Poppins-Bold'), url(https://fonts.gstatic.com/s/poppins/v5/57TQ-anwthzkETEIO4jESPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+/* universal */
+
 html {
-  font-size: 18px;
+  font-size: 20px;
+  font-family: 'Poppins';
 }
 
 html, div {
   border: solid black 1px;
 }
 
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
 /* Header */
+
+.logo span {
+  color: #027775;
+}
 
 header {
   font-size: 32px;
-
   width: 100%;
   height: 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #d8c5a4;
 }
 
 nav {
@@ -25,6 +97,15 @@ nav {
 nav a {
   text-decoration: none;
   padding: 0 8px;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #d8c5a4;
+  transition: color 300ms linear, background-color 300ms linear;
+}
+
+nav a:hover {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 header img {
@@ -46,6 +127,7 @@ header .logo, nav {
   display: flex;
   width: 100%;
   align-items: center;
+  background-color: #422d23;
 }
 
 .intro p {
@@ -56,33 +138,84 @@ header .logo, nav {
 .banner img {
   width: 60%;
   margin: 32px 24px;
+  border: solid 5px #ede6d7;
+  border-radius: 4px;
 }
 
 .banner .intro {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-right: 24px;
+}
+
+.banner .intro h3 {
+  margin: 32px 0;
+}
+
+.banner .intro .button {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
 }
 
 /* info banner */
 
 .info {
 display: flex;
+background-color: #d8c5a4;
+}
 
+.info .testimony {
+  width: 60%;
+  margin: 32px 24px;
+  background-color: #e5dcc5;
+}
+
+.info .testimony .text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+.info .testimony .text p {
+  margin: 24px 0;
 }
 
 .info img {
-  width: 60%;
+  width: 100%;
+  height: auto;
+  image-orientation: center;
+  overflow: hidden;
 }
 
-.menuitem {
+.info .menu {
+  width: 40%;
+}
+
+.info .menuitem {
   display: flex;
+  align-items: center;
+}
+
+.info .menuitem img {
+  width: 35%;
+  height: auto;
+  margin: 16px;
+}
+
+.info .menuitem div {
+  width: 65%;
 }
 
 /* classes */
 
+.learning {
+  background-color: #422d23;
+}
+
 .classes {
-  margin: 32px 72px;
+  margin: 16px 48px;
 }
 
 .jumbotron h2 {
@@ -92,20 +225,21 @@ display: flex;
 
 .classes .menu {
   display: flex;
-  justify-content: space-between;
-  margin: 16px 32px;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .class {
   display: flex;
   flex-flow: column wrap;
-  width: 500px;
+  width: 30%;
   margin: 16px 16px;
 }
 
 .class img {
+  width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 .class h3 {
@@ -118,4 +252,78 @@ display: flex;
 
 .class p {
   margin-bottom: 24px;
+}
+
+/* thesis exhibit */
+
+.thesis {
+  background-color: #d8c5a4;
+}
+
+.thesis .content{
+  display: flex;
+}
+
+.thesis .video {
+  max-width: 60%;
+  background-color: #e5dcc5;
+}
+
+.thesis .video h3 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.thesis .video p {
+  margin-bottom: 32px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+#video {
+  margin: 0 24px;
+}
+
+.thesis video {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.thesis .menu {
+  width: 40%;
+}
+
+.thesis .menuitem {
+  display: flex;
+  align-items: center;
+}
+
+.thesis .menuitem .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.thesis img {
+  margin: 16px;
+  width: 35%;
+  height: auto;
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer span, .footer .links {
+  margin: 16px 24px;
+}
+
+.footer .links a {
+  margin: 0 8px;
 }
