@@ -1,7 +1,3 @@
-blue #0a3ece
-brown #aa4d0a
-gold #ccc135
-
 @font-face {
   font-family: 'Bitter';
   font-style: normal;
@@ -56,22 +52,25 @@ html {
   font-family: 'Poppins';
 }
 
-html, div {
-  border: solid black 1px;
-}
-
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
+  color: #ffffff;
+  font-family: 'bitter bold';
 }
 
 h2 {
   font-size: 2rem;
   font-weight: bold;
+  font-family: 'bitter bold';
 }
 
 h3 {
   font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.2rem;
 }
 
 /* Header */
@@ -121,12 +120,26 @@ header .logo, nav {
   margin: 0 24px;
 }
 
+/* Header - Mobile */
+
+.mobilenav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
 /* banner */
 
 .banner {
   display: flex;
   width: 100%;
   align-items: center;
+  background-color: #1c120d;
+  transition: background-color 1s ease-in 200ms;
+}
+
+.banner:hover {
   background-color: #422d23;
 }
 
@@ -139,24 +152,48 @@ header .logo, nav {
   width: 60%;
   margin: 32px 24px;
   border: solid 5px #ede6d7;
-  border-radius: 4px;
 }
 
 .banner .intro {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 24px;
+  margin-right: 40px;
 }
 
 .banner .intro h3 {
   margin: 32px 0;
+  color: #d8c5a4;
 }
 
 .banner .intro .button {
   width: 100%;
   text-align: center;
   padding: 20px 0;
+  background-color: #027775;
+  border: solid 3px #027775;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.banner .intro .button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.banner .intro .button:hover {
+  background-color: #179e9b;
+  border: solid 3px #179e9b;
+}
+
+.banner .intro .button:active {
+  background-color: #013d3c;
+  border: solid 3px #013d3c;
+}
+
+.banner .intro .button a:active {
+  color: #a0a0a0;
 }
 
 /* info banner */
@@ -166,10 +203,22 @@ display: flex;
 background-color: #d8c5a4;
 }
 
+.info .text h2 {
+  font-family: 'Bitter bold';
+  color: #422d23;
+}
+
+.info .text span {
+  font-style: italic;
+}
+
 .info .testimony {
   width: 60%;
   margin: 32px 24px;
-  background-color: #e5dcc5;
+}
+
+.info .testimony img {
+  border: solid 5px #422d23;
 }
 
 .info .testimony .text {
@@ -191,11 +240,32 @@ background-color: #d8c5a4;
 
 .info .menu {
   width: 40%;
+  border-left: 2px solid #027775;
+}
+
+.info .menu p {
+  margin: 8px 0;
+}
+
+.info .menu a {
+  text-decoration: underline;
+  color: #ffffff;
 }
 
 .info .menuitem {
   display: flex;
   align-items: center;
+  border-bottom: 2px solid #027775;
+  transition: all 400ms linear;
+}
+
+.info .menuitem:last-child {
+  background-color: #a89279;
+}
+
+.info .menuitem:hover {
+  background-color: #027775;
+  color: #ffffff;
 }
 
 .info .menuitem img {
@@ -214,13 +284,22 @@ background-color: #d8c5a4;
   background-color: #422d23;
 }
 
+.learning h2 {
+  color: #179e9b;
+}
+
+.learning .menu {
+  background-color: #563c2f;
+}
+
 .classes {
-  margin: 16px 48px;
+  padding: 16px 48px;
 }
 
 .jumbotron h2 {
   text-align: center;
-  margin: 32px 0;
+  padding-top: 32px;
+  padding-bottom: 16px;
 }
 
 .classes .menu {
@@ -234,6 +313,17 @@ background-color: #d8c5a4;
   flex-flow: column wrap;
   width: 30%;
   margin: 16px 16px;
+  background-color: #e5dcc5;
+  transition: all 400ms linear;
+}
+
+.class:hover {
+  background-color: #027775;
+  color: #ffffff;
+}
+
+.class .content {
+  padding: 16px;
 }
 
 .class img {
@@ -244,9 +334,12 @@ background-color: #d8c5a4;
 
 .class h3 {
   margin-top: 16px;
+  font-family: 'Josefin Sans';
+  font-size: 1.7rem;
 }
 
 .class span {
+  display: inline-block;
   margin: 8px 0;
 }
 
@@ -260,13 +353,16 @@ background-color: #d8c5a4;
   background-color: #d8c5a4;
 }
 
+.thesis h2 {
+  color: #027775;
+}
+
 .thesis .content{
   display: flex;
 }
 
 .thesis .video {
   max-width: 60%;
-  background-color: #e5dcc5;
 }
 
 .thesis .video h3 {
@@ -274,6 +370,8 @@ background-color: #d8c5a4;
   margin-bottom: 8px;
   margin-left: 24px;
   margin-right: 24px;
+  font-family: 'Josefin Sans Bold';
+  color: #422d23;
 }
 
 .thesis .video p {
@@ -295,9 +393,24 @@ background-color: #d8c5a4;
   width: 40%;
 }
 
+.thesis .menu .first {
+  border-top: solid 1px #563c2f;
+}
+
 .thesis .menuitem {
   display: flex;
   align-items: center;
+  border-bottom: solid 1px #563c2f;
+  transition: all 400ms linear;
+}
+
+.thesis .menuitem:first-child {
+  background-color: #a89279;
+}
+
+.thesis .menuitem:hover {
+  background-color: #027775;
+  color: #ffffff;
 }
 
 .thesis .menuitem .text {
@@ -318,6 +431,8 @@ background-color: #d8c5a4;
 .footer {
   display: flex;
   justify-content: space-between;
+  background-color: #1c120d;
+  color: #8c806d;
 }
 
 .footer span, .footer .links {
@@ -326,4 +441,22 @@ background-color: #d8c5a4;
 
 .footer .links a {
   margin: 0 8px;
+}
+
+@media only screen and (min-width: 480px) {
+  .mobilenav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .logo span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  nav, .logo img {
+    display: none;
+  }
 }
