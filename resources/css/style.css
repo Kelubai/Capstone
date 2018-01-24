@@ -45,6 +45,7 @@
   src: local('Poppins Bold'), local('Poppins-Bold'), url(https://fonts.gstatic.com/s/poppins/v5/57TQ-anwthzkETEIO4jESPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
 }
+
 /* universal */
 
 html {
@@ -120,7 +121,7 @@ header .logo, nav {
   margin: 0 24px;
 }
 
-/* Header - Mobile */
+/* Header - MOBILE */
 
 .mobilenav {
   display: flex;
@@ -443,20 +444,172 @@ background-color: #d8c5a4;
   margin: 0 8px;
 }
 
+/*hidden phone view elements */
+
 @media only screen and (min-width: 480px) {
   .mobilenav {
     display: none;
   }
+
+  .info .menu .mobile {
+    display: none;
+  }
 }
+
+/* tablet view */
 
 @media only screen and (max-width: 768px) {
   .logo span {
     display: none;
   }
-}
 
-@media only screen and (max-width: 480px) {
-  nav, .logo img {
+  .banner {
+    display: inline-block;
+  }
+
+  .banner img {
+    margin: 0px;
+    border: none;
+    width: 100%;
+  }
+
+  .banner .intro {
+    margin: 32px 16px;
+  }
+
+  .button {
+    width: auto;
+  }
+
+  .info .menu .desktop {
+    display: none
+  }
+
+  .classes img, .classes span, .classes p {
     display: none;
   }
+
+  .classes {
+    padding: 16px;
+  }
+
+  .classes .menu {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .classes .menu .class {
+    width: auto;
+  }
+
+  .classes .menu .class .content {
+    padding: 0;
+  }
+
+  .classes .menu .class h3 {
+    margin: 16px;
+    margin-bottom: 24px;
+  }
+
+  .thesis .videotext, .thesis .menu {
+    display: none;
+  }
+
+  .thesis .video {
+    max-width: 100%;
+  }
+
+  #video {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  .footer .links {
+    display: none;
+  }
+}
+
+/* phone view */
+
+@media only screen and (max-width: 480px) {
+  header .logo, nav {
+    margin: 0;
+  }
+
+  nav, .logo img, .logo {
+    display: none;
+  }
+
+  .logo {
+    margin: 0;
+    padding: 0;
+  }
+
+  .testimony {
+    display: none;
+  }
+
+  .info .menu img {
+    width: 100%;
+    height: auto;
+    margin: none;
+  }
+
+  .info .menu .desktop {
+    display: none;
+  }
+
+  .info .menu .mobile {
+    margin: 0;
+  }
+
+  .info .menu {
+    width: 100%;
+  }
+
+  .info .menu .menuitem {
+    display: inline-block;
+    margin: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: auto;
+    border: none;
+  }
+
+  .info .menuitem .text {
+    width: 100%;
+  }
+
+  .info .menu .orientation {
+    margin-top: 16px;
+  }
+
+  .info .menuitem:last-child {
+    background-color: initial;
+  }
+}
+
+/* universal animation removal for mobile devices */
+
+@media only screen and (max-width : 768px) {
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
 }
