@@ -1,33 +1,25 @@
 @font-face {
-  font-family: 'Bitter';
+  font-family: 'Bitter bold';
   font-style: normal;
-  font-weight: 400;
-  src: local('Bitter Regular'), local('Bitter-Regular'), url(https://fonts.gstatic.com/s/bitter/v12/zfs6I-5mjWQ3nxqccMoL2A.woff2) format('woff2');
+  font-weight: 700;
+  src: local('Bitter Bold'), local('Bitter-Bold'), url(https://fonts.gstatic.com/s/bitter/v12/evC1haE-MsorTl_A7_uSGVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
 }
 
 @font-face {
-    font-family: 'Bitter bold';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Bitter Bold'), local('Bitter-Bold'), url(https://fonts.gstatic.com/s/bitter/v12/evC1haE-MsorTl_A7_uSGVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Josefin Sans Regular'), local('JosefinSans-Regular'), url(https://fonts.gstatic.com/s/josefinsans/v12/xgzbb53t8j-Mo-vYa23n5ugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
 }
 
 @font-face {
-      font-family: 'Josefin Sans';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Josefin Sans Regular'), local('JosefinSans-Regular'), url(https://fonts.gstatic.com/s/josefinsans/v12/xgzbb53t8j-Mo-vYa23n5ugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
-}
-
-@font-face {
-        font-family: 'Josefin Sans bold';
-        font-style: normal;
-        font-weight: 700;
-        src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v12/C6HYlRF50SGJq1XyXj04z3NuWYKPzoeKl5tYj8yhly0.woff2) format('woff2');
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+  font-family: 'Josefin Sans bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v12/C6HYlRF50SGJq1XyXj04z3NuWYKPzoeKl5tYj8yhly0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
 }
 
 @font-face {
@@ -38,19 +30,11 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
 }
 
-@font-face {
-  font-family: 'Poppins bold';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Poppins Bold'), local('Poppins-Bold'), url(https://fonts.gstatic.com/s/poppins/v5/57TQ-anwthzkETEIO4jESPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
-}
-
 /* universal */
 
 html {
   font-size: 20px;
-  font-family: 'Poppins';
+  font-family: 'Poppins', Georgia, Sans-Serif;
 }
 
 h1 {
@@ -103,11 +87,6 @@ nav a {
   transition: color 300ms linear, background-color 300ms linear;
 }
 
-nav a:hover {
-  color: #000000;
-  background-color: #ffffff;
-}
-
 header img {
   height: 50px;
   width: auto;
@@ -140,14 +119,9 @@ header .logo, nav {
   transition: background-color 1s ease-in 200ms;
 }
 
-.banner:hover {
-  background-color: #422d23;
-}
-
 .intro p {
   align-text: center;
 }
-
 
 .banner img {
   width: 60%;
@@ -181,20 +155,6 @@ header .logo, nav {
 .banner .intro .button a {
   text-decoration: none;
   color: #ffffff;
-}
-
-.banner .intro .button:hover {
-  background-color: #179e9b;
-  border: solid 3px #179e9b;
-}
-
-.banner .intro .button:active {
-  background-color: #013d3c;
-  border: solid 3px #013d3c;
-}
-
-.banner .intro .button a:active {
-  color: #a0a0a0;
 }
 
 /* info banner */
@@ -260,15 +220,6 @@ background-color: #d8c5a4;
   transition: all 400ms linear;
 }
 
-.info .menuitem:last-child {
-  background-color: #a89279;
-}
-
-.info .menuitem:hover {
-  background-color: #027775;
-  color: #ffffff;
-}
-
 .info .menuitem img {
   width: 35%;
   height: auto;
@@ -318,11 +269,6 @@ background-color: #d8c5a4;
   transition: all 400ms linear;
 }
 
-.class:hover {
-  background-color: #027775;
-  color: #ffffff;
-}
-
 .class .content {
   padding: 16px;
 }
@@ -358,7 +304,7 @@ background-color: #d8c5a4;
   color: #027775;
 }
 
-.thesis .content{
+.thesis .content {
   display: flex;
 }
 
@@ -405,15 +351,6 @@ background-color: #d8c5a4;
   transition: all 400ms linear;
 }
 
-.thesis .menuitem:first-child {
-  background-color: #a89279;
-}
-
-.thesis .menuitem:hover {
-  background-color: #027775;
-  color: #ffffff;
-}
-
 .thesis .menuitem .text {
   display: flex;
   flex-direction: column;
@@ -442,6 +379,56 @@ background-color: #d8c5a4;
 
 .footer .links a {
   margin: 0 8px;
+}
+
+/* Hover and Clicking Animations, desktop only */
+
+@media only screen and (min-width: 768px) {
+  nav a:hover {
+    color: #000000;
+    background-color: #ffffff;
+  }
+
+  .banner:hover {
+    background-color: #422d23;
+  }
+
+  .banner .intro .button:hover {
+    background-color: #179e9b;
+    border: solid 3px #179e9b;
+  }
+
+  .banner .intro .button:active {
+    background-color: #013d3c;
+    border: solid 3px #013d3c;
+  }
+
+  .banner .intro .button a:active {
+    color: #a0a0a0;
+  }
+
+  .info .menuitem:last-child {
+    background-color: #a89279;
+  }
+
+  .info .menuitem:hover {
+    background-color: #027775;
+    color: #ffffff;
+  }
+
+  .class:hover {
+    background-color: #027775;
+    color: #ffffff;
+  }
+
+  .thesis .menuitem:first-child {
+    background-color: #a89279;
+  }
+
+  .thesis .menuitem:hover {
+    background-color: #027775;
+    color: #ffffff;
+  }
 }
 
 /*hidden phone view elements */
@@ -587,29 +574,4 @@ background-color: #d8c5a4;
   .info .menuitem:last-child {
     background-color: initial;
   }
-}
-
-/* universal animation removal for mobile devices */
-
-@media only screen and (max-width : 768px) {
-	.animated {
-		/*CSS transitions*/
-		-o-transition-property: none !important;
-		-moz-transition-property: none !important;
-		-ms-transition-property: none !important;
-		-webkit-transition-property: none !important;
-		transition-property: none !important;
-		/*CSS transforms*/
-		-o-transform: none !important;
-		-moz-transform: none !important;
-		-ms-transform: none !important;
-		-webkit-transform: none !important;
-		transform: none !important;
-		/*CSS animations*/
-		-webkit-animation: none !important;
-		-moz-animation: none !important;
-		-o-animation: none !important;
-		-ms-animation: none !important;
-		animation: none !important;
-	}
 }
